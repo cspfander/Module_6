@@ -11,7 +11,8 @@ n times
 
 
 def multiply_string(message, n):
-    pass
+    return message * n
 
 
 if __name__ == '__main__':
+    print(multiply_string("Colten", 4))
