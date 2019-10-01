@@ -14,7 +14,7 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
     :param test_name: stores user input as a test name to print
     :param test_score: stores a user input as a test score to print as well as be validated (optional)
     :param invalid_message: optional message that displays an indicated string if the user has input an invalid score
-    :return: pass
+    :return: either returns a string with the Test_name : test_score or with an invalid_message for an invalid input
     """
     if 0 <= test_score <= 100:
         # return {test_name: test_score}
@@ -24,4 +24,4 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
 
 
 if __name__ == '__main__':
-    print(score_input("Unit 9", 101))
+    print(score_input("Unit 9", 85))
