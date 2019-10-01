@@ -16,8 +16,9 @@ def score_input(test_name, test_score = 0, invalid_message = "Invalid test score
     :param invalid_message: optional message that displays an indicated string if the user has input an invalid score
     :return: pass
     """
-    # return {test_name: test_score}
-    return "Test name: " + str(test_name)
+    if 0 <= test_score <= 100:
+        # return {test_name: test_score}
+        return "Test name: " + str(test_name)
 
 
 if __name__ == '__main__':
