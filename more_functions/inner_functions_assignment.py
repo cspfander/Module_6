@@ -8,13 +8,19 @@ string with perimeter and area.
 """
 
 
-def measurements(a_list):
+def measurements(measurement_list):
     def area(a_list):  # calculates the area
-        return a_list[0] * a_list[1]
+        if len(a_list) == 1:
+            return a_list[0] * a_list[0]
+        if len(a_list) == 2:
+            return a_list[0] * a_list[1]
 
     def perimeter(a_list):  # calculates the perimeter
-        return (a_list[0] * 2) + (a_list[1] * 2)
-    return "Perimeter = " + str(perimeter(a_list)) + " Area = " + str(area(a_list))
+        if len(a_list) == 1:
+            return a_list[0] * 4
+        if len(a_list) == 2:
+            return (a_list[0] * 2) + (a_list[1] * 2)
+    return "Perimeter = " + str(perimeter(measurement_list)) + " Area = " + str(area(measurement_list))
 
 
 if __name__ == '__main__':

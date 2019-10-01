@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual("Invalid test score, try again!", validate_input_in_functions.score_input((9, 101)))
 
     def test_score_non_numeric(self):
-        self.assertEqual("Invalid test score! Please use only numeric!", validate_input_in_functions.score_input(8, i))
+        self.assertEqual("Invalid test score! Please use only numeric!", validate_input_in_functions.score_input(8, "i"))
 
     def test_score_input_invalid_message(self):
         self.assertEqual("YOU MESSED UP!", validate_input_in_functions.score_input(7, -20, "YOU MESSED UP!"))
