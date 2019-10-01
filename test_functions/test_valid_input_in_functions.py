@@ -10,10 +10,10 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual("Unit 12: 80", validate_input_in_functions.score_input("Unit 12", 80))
 
     def test_score_input_test_score_below_range(self):
-        self.assertEqual("Invalid test score, try again!", validate_input_in_functions.score_input(("Unit 10", -1)))
+        self.assertEqual("Invalid test score, try again!", validate_input_in_functions.score_input("Unit 10", -1))
 
     def test_score_input_test_score_above_range(self):
-        self.assertEqual("Invalid test score, try again!", validate_input_in_functions.score_input(("Unit 9", 101)))
+        self.assertEqual("Invalid test score, try again!", validate_input_in_functions.score_input("Unit 9", 101))
 
     def test_score_non_numeric(self):
         self.assertEqual("Invalid test score! Please use only numeric!", validate_input_in_functions.score_input("Unit 8", "i"))
