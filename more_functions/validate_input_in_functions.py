@@ -16,6 +16,11 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
     :param invalid_message: optional message that displays an indicated string if the user has input an invalid score
     :return: either returns a string with the Test_name : test_score or with an invalid_message for an invalid input
     """
+    try:
+        int(test_score)
+    except ValueError:
+        return "Invalid test score! Please use only numeric!"
+
     if 0 <= test_score <= 100:
         # return {test_name: test_score}
         return str(test_name) + ": " + str(test_score)
@@ -24,4 +29,5 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
 
 
 if __name__ == '__main__':
-    print(score_input("Unit 9", 85))
+    # print(score_input("Unit 9", 85))
+    print(score_input("Unit 8", "i"))
