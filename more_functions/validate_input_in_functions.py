@@ -18,8 +18,10 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
     """
     if 0 <= test_score <= 100:
         # return {test_name: test_score}
-        return "Test name: " + str(test_name)
+        return str(test_name) + ": " + str(test_score)
+    else:
+        return invalid_message
 
 
 if __name__ == '__main__':
-    print(score_input(9))
+    print(score_input("Unit 9", 101))
